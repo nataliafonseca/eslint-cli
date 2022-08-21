@@ -1,0 +1,15 @@
+{
+  "name": "@nataliafonseca/eslint-cli",
+  "version": "0.0.1",
+  "description": "CLI tool to generate my eslint and prettier configs",
+  "main": "index.js",
+  "type": "module",
+  "author": "Natália Fonseca",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^9.1.0",
+    "nanospinner": "^1.1.0",
+    "node-async-exec": "^1.2.0"
+  },
+  "bin": "./index.js"
+}
