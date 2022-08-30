@@ -21,7 +21,7 @@ export const nodeTsEslintConfig = {
       "error",
       {
         printWidth: 100,
-        singleQuote: true,
+        singleQuote: false,
         trailingComma: "all",
         endOfLine: "auto",
       },
