@@ -14,7 +14,6 @@ export const reactJsEslintConfig = {
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:react-perf/recommended",
     "prettier",
     "plugin:prettier/recommended",
   ],
@@ -25,7 +24,7 @@ export const reactJsEslintConfig = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "react-hooks", "react-perf", "prettier"],
+  plugins: ["react", "react-hooks", "prettier"],
   rules: {
     "prettier/prettier": [
       "error",
