@@ -57,7 +57,7 @@ if (answers.projectType === "React - TypeScript") {
   );
 
   await install(
-    "eslint prettier eslint-config-prettier eslint-plugin-prettier typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint-plugin-react-hooks"
+    "eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-import eslint-import eslint-plugin-simple-import-sort eslint-import-resolver-alias eslint-plugin-promise typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-flowtype eslint-plugin-jsx-a11y"
   );
 }
 
