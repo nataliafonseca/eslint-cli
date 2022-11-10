@@ -4,12 +4,7 @@ export const nodeJsEslintConfig = {
     es2021: true,
     jest: true,
   },
-  extends: [
-    "eslint:recommended",
-    "plugin:import/recommended",
-    "plugin:prettier/recommended",
-    "prettier",
-  ],
+  extends: ["eslint:recommended", "plugin:prettier/recommended", "prettier"],
   parserOptions: {
     ecmaFeatures: {
       modules: true,
@@ -17,13 +12,10 @@ export const nodeJsEslintConfig = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["prettier", "flowtype", "import", "simple-import-sort"],
+  plugins: ["prettier", "flowtype", "simple-import-sort"],
   rules: {
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
-    "import/no-unresolved": "error",
-    "import/first": "error",
-    "import/newline-after-import": "error",
-    "import/no-duplicates": "error",
   },
+  ignorePatterns: ["jest.config.js", "webpack.config.js", "setupTests.js"],
 };
