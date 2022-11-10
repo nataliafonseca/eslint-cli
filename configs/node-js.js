@@ -4,21 +4,21 @@ export const nodeJsEslintConfig = {
     es2021: true,
     jest: true,
   },
-  extends: ["eslint:recommended", "prettier", "plugin:prettier/recommended"],
+  extends: ["eslint:recommended", "plugin:prettier/recommended", "prettier"],
   parserOptions: {
+    ecmaFeatures: {
+      modules: true,
+    },
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["prettier"],
+  plugins: ["prettier", "flowtype"],
   rules: {
-    "prettier/prettier": [
-      "error",
-      {
-        printWidth: 100,
-        singleQuote: false,
-        trailingComma: "all",
-        endOfLine: "auto",
-      },
-    ],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/no-unresolved": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
   },
 };

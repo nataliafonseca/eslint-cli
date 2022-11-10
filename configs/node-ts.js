@@ -7,24 +7,24 @@ export const nodeTsEslintConfig = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
     "plugin:prettier/recommended",
+    "prettier",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
+    ecmaFeatures: {
+      modules: true,
+    },
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "prettier"],
+  plugins: ["@typescript-eslint", "prettier", "flowtype"],
   rules: {
-    "prettier/prettier": [
-      "error",
-      {
-        printWidth: 100,
-        singleQuote: false,
-        trailingComma: "all",
-        endOfLine: "auto",
-      },
-    ],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "import/no-unresolved": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
   },
 };

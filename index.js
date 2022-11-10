@@ -8,7 +8,7 @@ import exec from "node-async-exec";
 
 import { nodeJsEslintConfig } from "./configs/node-js.js";
 import { nodeTsEslintConfig } from "./configs/node-ts.js";
-import { prettierConfig } from "./configs/prettier.js";
+// import { prettierConfig } from "./configs/prettier.js";
 import { reactJsEslintConfig } from "./configs/react-js.js";
 import { reactTsEslintConfig } from "./configs/react-ts.js";
 
@@ -48,7 +48,7 @@ console.log();
 
 const spinner = createSpinner("Installing required dependencies...").start();
 
-fs.writeFileSync(".prettierrc.json", JSON.stringify(prettierConfig, null, 2));
+// fs.writeFileSync(".prettierrc.json", JSON.stringify(prettierConfig, null, 2));
 
 if (answers.projectType === "React - TypeScript") {
   fs.writeFileSync(
@@ -57,7 +57,7 @@ if (answers.projectType === "React - TypeScript") {
   );
 
   await install(
-    "eslint prettier eslint-config-prettier eslint-plugin-prettier typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint-plugin-react-hooks"
+    "eslint prettier eslint-config-prettier eslint-plugin-prettier typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-flowtype"
   );
 }
 
@@ -67,7 +67,7 @@ if (answers.projectType === "React - JavaScript") {
     JSON.stringify(reactJsEslintConfig, null, 2)
   );
   await install(
-    "eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks"
+    "eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y eslint-plugin-simple-import-sort eslint-plugin-flowtype"
   );
 }
 
@@ -78,7 +78,7 @@ if (answers.projectType === "Node - TypeScript") {
   );
 
   await install(
-    "eslint prettier eslint-config-prettier eslint-plugin-prettier typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser"
+    "eslint prettier eslint-config-prettier eslint-plugin-prettier  typescript @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-simple-import-sort eslint-plugin-flowtype"
   );
 }
 
@@ -88,7 +88,7 @@ if (answers.projectType === "Node - JavaScript") {
     JSON.stringify(nodeJsEslintConfig, null, 2)
   );
   await install(
-    "eslint prettier eslint-config-prettier eslint-plugin-prettier"
+    "eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-plugin-simple-import-sort eslint-plugin-flowtype"
   );
 }
 
