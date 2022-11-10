@@ -10,6 +10,14 @@ export const reactTsEslintConfig = {
     react: {
       version: "detect",
     },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"],
+    },
+    "import/resolver": {
+      typescript: {
+        alwaysTryTypes: true,
+      },
+    },
   },
   extends: [
     "eslint:recommended",
