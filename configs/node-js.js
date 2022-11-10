@@ -4,7 +4,12 @@ export const nodeJsEslintConfig = {
     es2021: true,
     jest: true,
   },
-  extends: ["eslint:recommended", "plugin:prettier/recommended", "prettier"],
+  extends: [
+    "eslint:recommended",
+    "plugin:import/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+  ],
   parserOptions: {
     ecmaFeatures: {
       modules: true,
@@ -12,7 +17,7 @@ export const nodeJsEslintConfig = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["prettier", "flowtype"],
+  plugins: ["prettier", "flowtype", "import", "simple-import-sort"],
   rules: {
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",

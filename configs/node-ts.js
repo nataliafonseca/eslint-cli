@@ -7,6 +7,7 @@ export const nodeTsEslintConfig = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
     "plugin:prettier/recommended",
     "prettier",
   ],
@@ -18,7 +19,7 @@ export const nodeTsEslintConfig = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "prettier", "flowtype"],
+  plugins: ["@typescript-eslint", "prettier", "import", "flowtype"],
   rules: {
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
