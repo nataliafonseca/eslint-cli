@@ -16,6 +16,8 @@ async function install(packageName) {
   try {
     if (answers.packageManager === "Yarn") {
       await exec({ cmd: `yarn add -D ${packageName}` });
+    } else if (answers.packageManager === "pnpm") {
+      await exec({ cmd: `pnpm add -D ${packageName}` });
     } else {
       await exec({ cmd: `npm i -D ${packageName}` });
     }
@@ -40,7 +42,7 @@ const answers = await inquirer.prompt([
     name: "packageManager",
     type: "list",
     message: "What package manager are you using?",
-    choices: ["Yarn", "npm"],
+    choices: ["pnpm", "Yarn", "npm"],
   },
 ]);
 
