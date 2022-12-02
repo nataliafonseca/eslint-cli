@@ -12,7 +12,7 @@ export const nodeJsEslintConfig = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["prettier", "flowtype", "simple-import-sort"],
+  plugins: ["prettier", "simple-import-sort"],
   rules: {
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",

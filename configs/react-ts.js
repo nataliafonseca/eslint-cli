@@ -35,7 +35,6 @@ export const reactTsEslintConfig = {
     "react",
     "react-hooks",
     "jsx-a11y",
-    "flowtype",
     "simple-import-sort",
   ],
   rules: {

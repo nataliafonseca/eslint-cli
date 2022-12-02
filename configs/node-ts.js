@@ -18,7 +18,7 @@ export const nodeTsEslintConfig = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint", "prettier", "flowtype", "simple-import-sort"],
+  plugins: ["@typescript-eslint", "prettier", "simple-import-sort"],
   rules: {
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
